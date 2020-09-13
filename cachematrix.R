@@ -16,7 +16,7 @@
 ## (1) set the value of the matrix (2) get the value of the matrix (3) set the value of the inverse (4) get the value of the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-  if(ifelse(nrow(x) == ncol(x), ifelse(det(x) != 0, TRUE, FALSE), FALSE)) { # check if the matrix square and invertible
+  if(ifelse(nrow(x) == ncol(x), ifelse(det(x) != 0, TRUE, FALSE), FALSE)) { # check if matrix is square and invertible
     inv <- NULL
     set <- function(y) {
       x <<- y
@@ -33,8 +33,6 @@ makeCacheMatrix <- function(x = matrix()) {
     message("[makeCacheMatrix error]: 'x' must be a square, invertible matrix")
   }
 }
-
-
 
 
 ## FUNCTION #2: cacheSolve
